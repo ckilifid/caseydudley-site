@@ -16,7 +16,7 @@
 <style>
 /* Layout follows the Wink blueprint. Palette, type and treatments come from the Casey Dudley design system (live caseydudley.com). */
 :root{
-  --bg:#1C1A16; --surface:#24221D;--olive-hi:#BDB96C;--olive:rgba(189,185,108,.42);--olive-bg:#2A2913; --fg:#F8F6F1; --muted:#C9C3B6; --muted2:#B3AD9F; --line:#8F897C; --track:#2E2B25; --ink:#1C1A16; --grid:rgba(248,246,241,.045);
+  --bg:#1C1A16; --surface:#2B2417;--olive-hi:#BDB96C;--olive:rgba(189,185,108,.42);--olive-bg:#2B2417; --fg:#F8F6F1; --muted:#C9C3B6; --muted2:#B3AD9F; --line:#8F897C; --track:#2E2B25; --ink:#1C1A16; --grid:rgba(248,246,241,.045);
   --gold:#E8B43C; --hl:#F4DC9E;
   --draft:#E8875A; --draft-soft:#33251E; --slot:#7E786C;
   --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
@@ -231,6 +231,12 @@ footer{background:#141310;border-top:1px solid rgba(248,246,241,.32);margin-top:
 .card .kind,.pcard .plbl,.card .src{font:500 12px/1.4 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--olive-hi)}
 .card q,.pcard p{font-size:17px;line-height:1.7}
 @media (max-width:1023px){.card q,.pcard p{font-size:16px;line-height:1.7}}
+
+
+/* One fill everywhere (Casey: bronze-umber #2B2417): photo frame, top bar tint, footer band */
+.photo .img{background:var(--olive-bg)}
+header.top{background:rgba(43,36,23,.85)}
+footer{background:var(--olive-bg)}
 
 footer a{display:inline-flex;align-items:center;min-height:44px}
 </style>
