@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Casey Dudley LLC | AI for Montana and Wyoming small businesses</title>
-<meta name="description" content="Most AI wasn't intended for everyday business. Building AI that delivers strong returns for a Main Street business took me 800 hours to figure out.">
+<meta name="description" content="AI for everyday business. Most AI was intended for enterprise corporations, not Main Street. I help small businesses use what I learned in 800 hours to free up capacity.">
 <link rel="canonical" href="https://caseydudley.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://caseydudley.com/">
 <meta property="og:title" content="Casey Dudley LLC | AI for Montana and Wyoming small businesses">
-<meta property="og:description" content="Most AI wasn't intended for everyday business.">
+<meta property="og:description" content="AI for everyday business.">
 <meta property="og:image" content="https://caseydudley.com/casey-rachel-remy.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap">
@@ -36,7 +36,7 @@ p{margin:0}
 /* proof key (not part of the site) */
 
 /* header */
-header.top{position:sticky;top:0;z-index:5;background:var(--bg)}
+header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid #4A463E}
 header.top .wrap{display:flex;align-items:center;justify-content:flex-end;min-height:68px;gap:12px}
 header.top .ref{margin-right:auto;font-size:13px;font-style:italic;color:var(--muted)}
 .logo{font:800 16px var(--mono);color:var(--fg);text-decoration:none}
@@ -45,14 +45,16 @@ header.top .ref{margin-right:auto;font-size:13px;font-style:italic;color:var(--m
 .btn.out{background:transparent}
 .btn:hover{background:var(--hl);color:var(--ink);border-color:var(--hl)}
 .btn:focus-visible{outline:3px solid var(--fg);outline-offset:2px}
+header.top .btn,header.top .btn.fill{background:transparent;color:var(--fg);border:1px solid var(--line);font-weight:700}
+header.top .btn:hover{background:var(--hl);color:var(--ink);border-color:var(--hl)}
 
 section{padding:60px 0}
 .label{font:700 12px/1.4 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:14px}
-.label::before{content:"";width:36px;height:5px;background:var(--gold);flex:none}
+.label:empty{display:none}
 .n{font:500 12px var(--mono);color:var(--muted);letter-spacing:.12em}
 .sechead{display:flex;flex-direction:column;gap:12px;margin-bottom:40px}
 
-.pull{margin:0 0 56px;max-width:62ch;padding:12px 16px;border-left:8px solid var(--gold);display:flex;flex-direction:column;gap:8px}
+.pull{margin:0 0 56px;max-width:62ch;padding:12px 16px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:8px}
 .pull span{font-size:18px;line-height:1.45;font-weight:700;color:var(--fg)}
 .pull cite{font-style:normal;font-size:13px;color:var(--muted)}
 .pull cite a{color:inherit;text-decoration:underline}
@@ -61,10 +63,9 @@ section{padding:60px 0}
 .hero .photo{order:-1}
 .hero .text{display:flex;flex-direction:column;gap:18px}
 .eyebrow{font:500 14px/1.6 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);max-width:62ch;display:flex;align-items:flex-start;gap:14px}
-.eyebrow::before{content:"";width:36px;height:5px;background:var(--gold);flex:none;margin-top:.6em}
 .lede{font-size:16px;line-height:1.6;max-width:62ch}
 .btns{display:flex;flex-wrap:wrap;gap:12px}
-.photo{display:flex;flex-direction:column;border:2px solid var(--line);background:var(--surface);box-shadow:4px 4px 0 0 var(--gold)}
+.photo{display:flex;flex-direction:column;border:2px solid var(--line);background:var(--surface)}
 .photo .img{aspect-ratio:1600/1455}
 .photo .cap{display:flex;justify-content:space-between;padding:10px 14px;font:500 13px var(--mono);color:var(--muted);border-top:2px solid var(--line)}
 
@@ -81,8 +82,8 @@ section{padding:60px 0}
 .obs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:48px}
 .obs li{display:flex;flex-direction:column;gap:12px}
 .obs .num{font:800 26px/1.1 var(--mono);letter-spacing:-0.01em;color:var(--fg);display:inline-flex;align-items:center;gap:12px}
-.obs .num::after{content:"";width:36px;height:5px;background:var(--gold)}
 .obs li p{font-size:15px;line-height:1.5}
+.obs li p.ex{font-size:14px;line-height:1.6;color:var(--muted);margin-top:-4px}
 .obs li.is-draft{background:var(--draft-soft);border-color:var(--draft);box-shadow:none}
 .obs .tag{font:700 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--draft)}
 @media (max-width:1023px){.obs{grid-template-columns:1fr;gap:32px}}
@@ -94,8 +95,17 @@ section{padding:60px 0}
 .method p{font-size:15px;line-height:1.55;max-width:62ch}
 .mn{font:800 36px/1 var(--mono);letter-spacing:-0.02em}
 .cost{font:800 18px/1.2 var(--mono);text-align:right;white-space:nowrap}.cost small{display:block;font:400 13px var(--mono);color:var(--muted);margin-top:4px}
-.c1{color:#E8B43C}.c2{color:#F4DC9E}.c3{color:#B8860B}.c4{color:#F8F6F1}
+.c1,.c2,.c3,.c4{color:var(--fg)}
 .ledger{max-width:980px;border-top:4px double var(--line)}
+.pstack{max-width:980px;display:flex;flex-direction:column;border-top:1px solid #4A463E}
+.pitem{display:flex;flex-direction:column;gap:10px;padding:36px 0}
+.pitem+.pitem{border-top:1px solid #4A463E}
+.plbl{font:500 12px/1.4 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--line)}
+.pitem .ptitle{margin:0;font:800 20px/1.35 var(--mono);text-wrap:balance}
+.pitem p{margin:0;font-size:16px;line-height:1.7;color:var(--muted);max-width:62ch}
+.pitem p b{color:var(--fg);font-weight:700}
+.pitem .pfig{font:700 20px/1.4 var(--mono);color:var(--fg)}
+.pitem .pret{font:700 18px/1.6 var(--mono);color:var(--fg)}
 .method>li:last-child{border-bottom:0}
 .lrow{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0 12px 92px;border-bottom:1px solid var(--line)}
 .lrow .lk{font:700 15px var(--mono)}
@@ -113,22 +123,19 @@ section{padding:60px 0}
 .steps{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:stretch}
 @media (max-width:1023px){.steps{grid-template-columns:1fr}}
 /* reviews strip */
-.gchip{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:6px 14px;border:2px solid var(--line);background:var(--surface);box-shadow:4px 4px 0 0 var(--gold);text-decoration:none;font-weight:800;color:var(--fg)}
+.gchip{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:6px 14px;border:2px solid var(--line);background:var(--surface);text-decoration:none;font-weight:800;color:var(--fg)}
 .gchip .stars{color:var(--gold);letter-spacing:.1em}
 .card .stars,.card .kind{line-height:22px;min-height:22px}
-.card .kind{font:700 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.card .kind{font:700 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .gchip .cnt{font-weight:500;font-size:14px}
 .phnote{font:700 12px var(--mono);color:var(--draft);background:var(--draft-soft);border:2px solid var(--draft);padding:6px 10px;align-self:flex-start}
 .strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 96px 18px;margin:0 -96px;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent);mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
 .strip::-webkit-scrollbar{display:none}
 .strip{align-items:flex-start;padding-top:18px}
-.strip .card:nth-child(3n+1){transform:rotate(-.7deg)}
-.strip .card:nth-child(3n+2){transform:rotate(.6deg);margin-top:22px}
-.strip .card:nth-child(3n){transform:rotate(-.3deg);margin-top:8px}
 @media (prefers-reduced-motion:reduce){.strip .card{transform:none}}
 .strip .card:last-child{flex-basis:min(520px,82vw)}
-.card{flex:0 0 min(360px,82vw);scroll-snap-align:start;background:var(--surface);border:2px solid var(--line);border-left:8px solid var(--gold);padding:16px;display:flex;flex-direction:column;gap:12px}
-.card q{display:block;quotes:none;font-size:14px;line-height:1.55}
+.card{flex:0 0 min(360px,82vw);scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);padding:16px;display:flex;flex-direction:column;gap:12px}
+.card q{display:block;quotes:none;font-size:15px;line-height:1.6}
 .card .who{margin-top:2px;font:700 13px var(--mono)}
 .card .who span{display:block;font-weight:400;color:var(--muted)}
 .card .src{font:500 12px var(--mono);color:var(--muted);letter-spacing:.04em}
@@ -160,6 +167,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-bet
 }
 @media (max-width:719px){.hero{grid-template-columns:1fr;gap:32px}.hero .photo{order:0;max-width:360px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+header.top .btn.book{background:var(--gold);color:var(--ink);border-color:var(--gold);font-weight:800}
+.pitem .pbtn{margin-top:8px}
+@media (max-width:480px){header.top .ref{display:none}header.top .btn{flex:1}.pitem .pbtn .btn{flex:0 1 auto}}
 .stripnav{display:flex;gap:10px;justify-content:flex-end;margin:-24px 0 12px}
 .snb{min-height:44px;padding:0 14px;font:800 14px var(--mono);background:transparent;color:var(--fg);border:2px solid var(--line);cursor:pointer}
 .snb:hover{background:var(--hl);color:var(--ink);border-color:var(--hl)}
@@ -172,8 +182,8 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
 
 <header class="top"><div class="wrap">
   <span class="ref">By referral</span>
-  <a class="btn fill" href="sms:+14066025383">Text Casey</a>
-  <a class="btn out" href="mailto:casey@caseydudley.com">Email Casey</a>
+  <a class="btn out" href="sms:+14066025383">Text a question</a>
+  <a class="btn fill book" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener">Book the hour</a>
 </div></header>
 
 <main id="top">
@@ -183,9 +193,10 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
   <div class="wrap">
     <div class="hero">
       <div class="text">
-        <p class="eyebrow">For owners who've learned that making AI pay off is frustrating as hell</p>
-        <h1 id="s1">Most AI wasn't intended for everyday business.</h1>
-        <p class="lede" style="max-width:46ch">It was designed for enterprise corporations. Building AI that delivers strong returns for a Main Street business took me <a href="https://www.linkedin.com/newsletters/7467703705195184128/" rel="noopener" target="_blank" style="color:inherit;text-decoration:underline;text-decoration-color:#E8B43C;text-underline-offset:3px">800 hours</a> to figure out.</p>
+        <p class="eyebrow">For owners who've tried AI and found it frustrating as hell</p>
+        <h1 id="s1">AI for everyday business.</h1>
+        <p class="lede" style="max-width:46ch">Most AI was intended for enterprise corporations, not Main Street.</p>
+        <p class="lede" style="max-width:46ch">I help small businesses use what I learned in <a href="https://www.linkedin.com/newsletters/7467703705195184128/" rel="noopener" target="_blank" style="color:inherit;text-decoration:underline;text-decoration-color:#E8B43C;text-underline-offset:3px">800 hours</a> to free up capacity.</p>
       </div>
       <figure class="photo" style="margin:0">
         <div class="img"><img src="casey-rachel-remy.jpg" alt="Casey Dudley with Rachel and Remy" style="display:block;width:100%;height:100%;object-fit:cover"></div>
@@ -204,30 +215,23 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
       <h2>From failed startups to building systems that learn</h2>
     </div>
     <div class="story-body">
-      <p>I’ve worked with startups and business owners since closing down my first service company in 2013.</p>
-      <p>Last year I spent 800 hours building and running an AI system. When it comes to AI for everyday Main Street businesses, two things stuck out:</p>
+      <p>In 2013 I closed down my first service company. I’ve worked with startups and business owners ever since.</p>
+      <p>Last year I spent 800 hours building and running an AI system. Two things stuck out:</p>
     </div>
     <ol class="obs">
-      <li><span class="num" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E8B43C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></span><p>Most of the AI we hear about runs on enterprise money, time and talent. Only a sliver of it is a smart investment for everyday businesses. And there are tricks to the craft.</p></li>
-      <li><span class="num" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E8B43C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></span><p>The return comes from making a series of bite-size investments, each of which liberates capacity: some on day one, some free up time by learning the unique patterns of the business.</p></li>
+      <li><span class="num" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#8F897C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></span><p>Most AI spend doesn't pencil for a small business.</p><p class="ex">Example: some cutting-edge builds overloaded my laptop. The $10K hardware fix won't pay off until revenue calls for it. Had I known, I'd have skipped them.</p></li>
+      <li><span class="num" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#8F897C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></span><p>Most AI saves a little time and never gets smarter.</p><p class="ex">Example: off-the-shelf AI can sort email on day one. The real gain comes when what's inside those emails feeds back in, so the system gets smarter and the time it gives back keeps growing.</p></li>
     </ol>
     <div class="expect">
       <span class="label" aria-hidden="true"></span>
-      <h2>Freeing capacity with what the business already has.</h2>
-      <ol class="method">
-        <li><span class="mn c1">01</span><div><h3>Start with the business, not the technology.</h3></div><span class="cost"></span></li>
-        <li class="deliv"><p><b>Deliverable:</b> the business’s best opportunities to free up time, ranked by return.</p><span class="cost">No charge</span></li>
-        <li><span class="mn c2">02</span><div><h3>Plug custom tools into the systems already running.</h3></div><span class="cost">$790</span></li>
-        <li><span class="mn c3">03</span><div><h3>Feed what we learn back in.</h3></div><span class="cost">Day 14</span></li>
-        <li><span class="mn c4">04</span><div><h3>Identify the next smart, small AI investment.</h3></div><span class="cost">Day 30</span></li>
-        <li class="deliv"><p><b>Decision:</b> the tools now know the business well enough to propose the next step and its return. The owner takes it from there, with my help if wanted.</p><span class="cost"></span></li>
-      </ol>
-      <div class="ledger">
-        <div class="lrow total"><span class="lk">Investment</span><span class="lv">$790 + 7 hours<small>one-time fee + the business’s time</small></span></div>
-        <div class="lrow head"><span class="lk">Return</span><span class="lv"><small>the business’s hours in · <span class="bk">hours back</span></small></span></div>
-        <div class="lrow"><span class="lk">Month 1</span><span class="lv">7 in · <span class="bk">10 back</span></span></div>
-        <div class="lrow"><span class="lk">Month 2</span><span class="lv">2 in · <span class="bk">10 back</span></span></div>
-        <div class="lrow"><span class="lk">Month 3</span><span class="lv">under 2 in · <span class="bk">stacking</span></span></div>
+      <h2>7 hours in, get 10 back.</h2>
+      <div class="pstack">
+        <div class="pitem"><span class="plbl">01 · No charge</span><h3 class="ptitle">Start with the business, not the technology.</h3><p><b>Deliverable:</b> the best opportunities to free up time, ranked by return.</p><div class="btns pbtn"><a class="btn fill" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener">Book the hour</a></div></div>
+        <div class="pitem"><span class="plbl">02 · $790</span><h3 class="ptitle">Plug custom tools into the systems already running.</h3></div>
+        <div class="pitem"><span class="plbl">03 · Day 14</span><h3 class="ptitle">Feed what we learn back in.</h3></div>
+        <div class="pitem"><span class="plbl">04 · Day 30</span><h3 class="ptitle">Identify the next smart, small AI investment.</h3><p><b>Decision:</b> the tools now suggest the next step and what it returns. The owner runs with it, or I help.</p></div>
+        <div class="pitem"><span class="plbl">Investment</span><p class="pfig">$790 + 7 hours</p></div>
+        <div class="pitem"><span class="plbl">Return</span><p class="pret">10 hours back in month 1, 10 more in month 2, then it stacks</p></div>
       </div>
     </div>
   </div>
@@ -247,8 +251,8 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
       <article class="card"><span class="kind">Pre-AI testimonial</span><q>Casey’s creative way of thinking allowed us to explore challenges and opportunities from different perspectives and test our assumptions. His ability to toggle between exploring the boundaries of this issue, seeing the forest for the trees, and then focusing tactical boots on the ground was precisely what the scope required. The collection of intertwined issues and stakeholder sandboxes the business model addresses is enough to make anyone's head spin, which is why casey fits the bill. If you have a complex business and want someone to help you take it to the next level, I highly recommend Casey.</q><p class="who">Stace McGee<span>Vice President, Fort Collins, CO</span></p></article>
       <article class="card"><span class="kind">Pre-AI testimonial</span><q>Casey is a skillful facilitator with contagious upbeat/ positive energy. He brings people together around common values, using creative problem solving to help teams focus their plans, gain consensus, and achieve their goals. Casey is a great listener and makes a genuine connection with everyone he meets. He is a joy to work with.</q><p class="who">Anya Fiechtl<span>Architect, Seattle, WA</span></p></article>
       <article class="card"><span class="kind">Pre-AI testimonial</span><q>Casey strategically designed the deliverance of our projects in a way that resulted in the client being engaged in the forefront of design and decision making. Threaded into his project deliverance, are feedback systems that measure success and provide opportunity to quickly respond to failures. On multiple occasions, Casey helped our team facilitate planning charrettes so that we could increase client engagement, shared leadership, and ownership of project objectives and key results. His professional manner that focuses “what matters” and teamwork extends well-beyond project deliverance, and contributes to an enriched organizational culture.</q><p class="who">Madison Graff<span>Owner/Founder, Bozeman, MT</span></p></article>
-      <article class="card"><span class="kind">Pre-AI testimonial</span><q>Casey has been an integral part in the implementing a systems platform for use across my divisions and others here at the university. He worked with my team, others throughout the University Services, and with me directly to strategize how this platform could work for our needs and the desires of upper administration. Creating feedback loops, helping to establish consistency, and exploring what matters were areas Casey excelled at in helping all of us through this implementation. He works with us as groups and individuals to understand both direct and global needs to better understand what goals and outcomes were valued by each, then used his knowledge of both the platform and workflow management systems to intertwine these for the most beneficial outcome.</q><p class="who">Sam Des Jardins<span>Senior Project &amp; Program Manager, Bozeman, MT</span></p></article>
-      <article class="card"><span class="kind">Pre-AI testimonial</span><q>It is my pleasure to offer thoughts on Casey Dudley’s knowledge, skills and abilities (KSAs). As a lead in, however, it is critical to mention that how Casey does his work is equally important to what he brings to the table. Casey is a consummate professional who demonstrates a welcome air of positivity, a consistent “can do” attitude, and a desire to engage clients in a needs-based discussion with the hope of providing multiple options for continuous improvement. This interaction style lends itself to amazing relationship building and better outcomes, no matter the topic. That said, Casey brings knowledge of business operations; skills in facilitation, brainstorming and planning; skills in all manner of tools including multiple software platforms; and strong abilities in relationship management, communication, data visualization, training, and project management. In the end, Casey uses these KSAs to distill the complex into digestible concepts, to help his clients arrive at a positive direction, and to manage that path forward if desired. I offer my strong endorsement on Casey’s behalf – he’s an excellent team member and leader.</q><p class="who">Chris Catlett<span>Former Director of Operations, Bozeman, MT</span></p></article>
+      <article class="card"><span class="kind">Pre-AI testimonial</span><q>Casey has been an integral part in the implementing a systems platform for use across my divisions and others here at the university. Creating feedback loops, helping to establish consistency, and exploring what matters were areas Casey excelled at in helping all of us through this implementation.</q><p class="who">Sam Des Jardins<span>Senior Project &amp; Program Manager, Bozeman, MT</span></p></article>
+      <article class="card"><span class="kind">Pre-AI testimonial</span><q>Casey is a consummate professional who demonstrates a welcome air of positivity, a consistent “can do” attitude, and a desire to engage clients in a needs-based discussion with the hope of providing multiple options for continuous improvement. This interaction style lends itself to amazing relationship building and better outcomes, no matter the topic. I offer my strong endorsement on Casey’s behalf – he’s an excellent team member and leader.</q><p class="who">Chris Catlett<span>Former Director of Operations, Bozeman, MT</span></p></article>
     </div>
   </div>
 </section>
