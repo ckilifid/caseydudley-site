@@ -173,6 +173,24 @@ header.top .btn.book{background:var(--gold);color:var(--ink);border-color:var(--
 .pcards{display:grid;grid-template-columns:1fr;gap:16px;padding:36px 0 0;border-top:1px solid #4A463E}@media (min-width:720px){.pcards{grid-template-columns:repeat(2,1fr)}}.pcard{display:flex;flex-direction:column;gap:10px;padding:24px;background:var(--olive-bg);border:1px solid var(--olive);border-radius:12px}.pcard .ptitle{margin:0;font:800 20px/1.35 var(--mono);text-wrap:balance}.pcard p{margin:0;font-size:16px;line-height:1.7;color:var(--muted)}.pcard p b{color:var(--fg);font-weight:700}.pcard .pbtn{margin-top:auto;padding-top:8px}.pcard .pbtn .btn{flex:0 1 auto}
 .sechead{align-items:center;text-align:center}.sechead .gchip{align-self:center}.expect>h2{text-align:center}.expect>.label{align-self:center}.pstack{width:100%;margin-inline:auto}
 .acc{color:var(--olive-hi)}
+/* Scale + breathing room, matched to Wink (phone: h1 48 / h2 36 / body 18 / lede 24 / 96px sections; desktop 72/48/18/24/128). Mono runs wider than Wink's sans, so set a step under. */
+section{padding:112px 0}
+h1{font-size:64px}
+h2{font-size:44px}
+.lede{font-size:19px;line-height:1.65}
+.story-body,.pitem p,.pcard p,.obs li p{font-size:17px;line-height:1.7}
+@media (max-width:1023px){
+  body{font-size:16px}
+  section{padding:88px 0}
+  h1{font-size:40px;line-height:1.1}
+  h2{font-size:30px;line-height:1.15}
+  .lede{font-size:18px;line-height:1.65}
+  .story-body,.pitem p,.pcard p,.obs li p{font-size:16px;line-height:1.7}
+  .pitem .ptitle,.pcard .ptitle{font-size:21px}
+  .card q{font-size:16px;line-height:1.65}
+}
+
+@media (min-width:1024px){.pcards{grid-template-columns:repeat(4,1fr)}.pcard{padding:22px 20px}}
 footer a{display:inline-flex;align-items:center;min-height:44px}
 </style>
 </head>
