@@ -191,6 +191,34 @@ h2{font-size:44px}
 }
 
 @media (min-width:1024px){.pcards{grid-template-columns:repeat(4,1fr)}.pcard{padding:22px 20px}}
+/* === Wink sharp-sweep batch (Casey: "don't stop till we publish"). Layout only; words, fonts, palette unchanged. === */
+/* 2. Hero photo (Casey-approved, his reference shot) */
+.photo{position:relative;border:0;background:none;padding:0;margin:12px!important}
+.photo::before{content:"";position:absolute;inset:-12px;border:1px solid rgba(248,246,241,.32);border-radius:20px;pointer-events:none;box-shadow:inset 0 -1px 0 rgba(232,180,60,.18),0 24px 48px -16px rgba(0,0,0,.55)}
+.photo .img{position:relative;border-radius:16px;overflow:hidden;background:#141310}
+.photo .img img{display:block;width:100%;height:100%;object-fit:cover}
+.photo .img::after{content:"";position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(to top,#1C1A16 0,rgba(28,26,22,.7) 50%,rgba(28,26,22,0) 100%);pointer-events:none}
+.photo .cap{position:absolute;left:20px;right:20px;bottom:16px;z-index:1;border-top:0;padding:0;background:none;font:500 12px/1.4 var(--mono);letter-spacing:.2em;text-transform:uppercase;color:rgba(248,246,241,.85)}
+.photo .cap span:last-child{color:rgba(248,246,241,.55)}
+/* 3. Card room: reviews 32px like Wink's testimonial cards, 24px on phones */
+.card{padding:32px}
+@media (max-width:719px){.card{padding:24px}}
+/* 4. Buttons: 2px radius, caps, tracked; one big closing button */
+.btn{border-radius:2px;text-transform:uppercase;letter-spacing:.06em}
+.close .btn.fill{min-height:60px;padding:0 32px;font-size:18px}
+/* 6. Frosted top bar with a soft hairline */
+header.top{background:rgba(28,26,22,.85);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid rgba(248,246,241,.32)}
+/* 7. Footer on its own darker band */
+footer{background:#141310;border-top:1px solid rgba(248,246,241,.32);margin-top:0}
+/* 8. Softer body text, headings stay full cream */
+.lede,.story-body,.obs li p,.card q{color:rgba(248,246,241,.85)}
+
+/* Step cards as a consistent set: same label/title/body rhythm, top-aligned; one centered CTA under the row */
+.pcards{align-items:stretch}.pcard{justify-content:flex-start;gap:12px}.pcard .plbl{margin:0}.pcard .ptitle{margin:0}
+@media (min-width:1024px){.pcard .ptitle{min-height:calc(4 * 1.35em)}}
+@media (min-width:720px) and (max-width:1023px){.pcard .ptitle{min-height:calc(2 * 1.35em)}}
+.pcta{justify-content:center;margin-top:32px}
+
 footer a{display:inline-flex;align-items:center;min-height:44px}
 </style>
 </head>
@@ -246,11 +274,12 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
         <div class="pitem"><span class="plbl">Investment</span><p class="pfig">$790 + 7 hours</p></div>
         <div class="pitem"><span class="plbl">Return</span><p class="pret">10 hours back in month 1, 10 more in month 2, then it stacks</p></div>
         <div class="pcards">
-        <div class="pcard"><span class="plbl">01 · No charge</span><h3 class="ptitle">Start with the business, not the technology.</h3><p><b>Deliverable:</b> the best opportunities to free up time, ranked by return.</p><div class="btns pbtn"><a class="btn fill" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener">Book the hour</a></div></div>
+        <div class="pcard"><span class="plbl">01 · No charge</span><h3 class="ptitle">Start with the business, not the technology.</h3><p><b>Deliverable:</b> the best opportunities to free up time, ranked by return.</p></div>
         <div class="pcard"><span class="plbl">02 · $790</span><h3 class="ptitle">Plug custom tools into the systems already running.</h3></div>
         <div class="pcard"><span class="plbl">03 · Day 14</span><h3 class="ptitle">Feed what we learn back in.</h3></div>
         <div class="pcard"><span class="plbl">04 · Day 30</span><h3 class="ptitle">Identify the next smart, small AI investment.</h3><p><b>Decision:</b> the tools now suggest the next step and what it returns. The owner runs with it, or I help.</p></div>
         </div>
+        <div class="btns pcta"><a class="btn fill" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener">Book the hour</a></div>
       </div>
     </div>
   </div>
