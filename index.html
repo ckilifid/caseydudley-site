@@ -123,7 +123,7 @@ section{padding:60px 0}
 .steps{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:stretch}
 @media (max-width:1023px){.steps{grid-template-columns:1fr}}
 /* reviews strip */
-.gchip{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:6px 14px;border:2px solid var(--olive);background:var(--olive-bg);text-decoration:none;font-weight:800;color:var(--fg)}
+.gchip{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:6px 14px;border:2px solid var(--olive);border-radius:999px;background:var(--olive-bg);text-decoration:none;font-weight:800;color:var(--fg)}
 .gchip .stars{color:var(--gold);letter-spacing:.1em}
 .card .stars,.card .kind{line-height:22px;min-height:22px}
 .card .kind{font:700 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
@@ -134,7 +134,7 @@ section{padding:60px 0}
 .strip{align-items:flex-start;padding-top:18px}
 @media (prefers-reduced-motion:reduce){.strip .card{transform:none}}
 .strip .card:last-child{flex-basis:min(520px,82vw)}
-.card{flex:0 0 min(360px,82vw);scroll-snap-align:start;background:var(--olive-bg);border:1px solid var(--olive);padding:16px;display:flex;flex-direction:column;gap:12px}
+.card{flex:0 0 min(360px,82vw);scroll-snap-align:start;background:var(--olive-bg);border:1px solid var(--olive);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px}
 .card q{display:block;quotes:none;font-size:15px;line-height:1.6}
 .card .who{margin-top:2px;font:700 13px var(--mono)}
 .card .who span{display:block;font-weight:400;color:var(--muted)}
@@ -170,7 +170,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-bet
 header.top .btn.book{background:var(--gold);color:var(--ink);border-color:var(--gold);font-weight:800}
 .pitem .pbtn{margin-top:8px}
 @media (max-width:480px){header.top .ref{display:none}header.top .btn{flex:1}.pitem .pbtn .btn{flex:0 1 auto}}
-.pcards{display:grid;grid-template-columns:1fr;gap:16px;padding:36px 0 0;border-top:1px solid #4A463E}@media (min-width:720px){.pcards{grid-template-columns:repeat(2,1fr)}}.pcard{display:flex;flex-direction:column;gap:10px;padding:24px;background:var(--olive-bg);border:1px solid var(--olive)}.pcard .ptitle{margin:0;font:800 20px/1.35 var(--mono);text-wrap:balance}.pcard p{margin:0;font-size:16px;line-height:1.7;color:var(--muted)}.pcard p b{color:var(--fg);font-weight:700}.pcard .pbtn{margin-top:auto;padding-top:8px}.pcard .pbtn .btn{flex:0 1 auto}
+.pcards{display:grid;grid-template-columns:1fr;gap:16px;padding:36px 0 0;border-top:1px solid #4A463E}@media (min-width:720px){.pcards{grid-template-columns:repeat(2,1fr)}}.pcard{display:flex;flex-direction:column;gap:10px;padding:24px;background:var(--olive-bg);border:1px solid var(--olive);border-radius:12px}.pcard .ptitle{margin:0;font:800 20px/1.35 var(--mono);text-wrap:balance}.pcard p{margin:0;font-size:16px;line-height:1.7;color:var(--muted)}.pcard p b{color:var(--fg);font-weight:700}.pcard .pbtn{margin-top:auto;padding-top:8px}.pcard .pbtn .btn{flex:0 1 auto}
+.sechead{align-items:center;text-align:center}.sechead .gchip{align-self:center}.expect>h2{text-align:center}.expect>.label{align-self:center}.pstack{width:100%;margin-inline:auto}
 footer a{display:inline-flex;align-items:center;min-height:44px}
 </style>
 </head>
@@ -275,6 +276,6 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
   <span><a href="sms:+14066025383">Text</a> · <a href="mailto:casey@caseydudley.com">Email</a></span>
 </div></footer>
 
-<script>(function(){var s=document.querySelector('.strip');if(!s||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var cards=[].slice.call(s.querySelectorAll('.card'));if(cards.length<2)return;cards.forEach(function(c){var k=c.cloneNode(true);k.setAttribute('aria-hidden','true');k.setAttribute('inert','');s.appendChild(k);});s.style.scrollSnapType='none';var first=s.querySelectorAll('.card')[cards.length];var pos=s.scrollLeft,hold=0,last=0,SPEED=64;function setW(){return first.offsetLeft-cards[0].offsetLeft;}function tick(t){var dt=last?Math.min(t-last,64)/1000:0;last=t;if(!hold&&!document.hidden){if(Math.abs(s.scrollLeft-pos)>2)pos=s.scrollLeft;pos+=SPEED*dt;var w=setW();if(w>0&&pos>=w)pos-=w;s.scrollLeft=pos;}else{pos=s.scrollLeft;var w2=setW();if(w2>0&&pos>=w2){pos-=w2;s.scrollLeft=pos;}}requestAnimationFrame(tick);}requestAnimationFrame(tick);var timer;function pause(){hold++;}function resume(){hold=Math.max(0,hold-1);}s.addEventListener('mouseenter',pause);s.addEventListener('mouseleave',resume);s.addEventListener('focusin',pause);s.addEventListener('focusout',resume);s.addEventListener('touchstart',function(){clearTimeout(timer);if(!s._t){s._t=1;pause();}},{passive:true});s.addEventListener('touchend',function(){clearTimeout(timer);timer=setTimeout(function(){if(s._t){s._t=0;resume();}},2500);},{passive:true});s.addEventListener('wheel',function(){clearTimeout(timer);if(!s._t){s._t=1;pause();}timer=setTimeout(function(){if(s._t){s._t=0;resume();}},2500);},{passive:true});})();</script>
+<script>(function(){var s=document.querySelector('.strip');if(!s||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var cards=[].slice.call(s.querySelectorAll('.card'));if(cards.length<2)return;cards.forEach(function(c){var k=c.cloneNode(true);k.setAttribute('aria-hidden','true');k.setAttribute('inert','');s.appendChild(k);});s.style.scrollSnapType='none';var first=s.querySelectorAll('.card')[cards.length];var pos=s.scrollLeft,hold=0,last=0,SPEED=128;function setW(){return first.offsetLeft-cards[0].offsetLeft;}function tick(t){var dt=last?Math.min(t-last,64)/1000:0;last=t;if(!hold&&!document.hidden){if(Math.abs(s.scrollLeft-pos)>2)pos=s.scrollLeft;pos+=SPEED*dt;var w=setW();if(w>0&&pos>=w)pos-=w;s.scrollLeft=pos;}else{pos=s.scrollLeft;var w2=setW();if(w2>0&&pos>=w2){pos-=w2;s.scrollLeft=pos;}}requestAnimationFrame(tick);}requestAnimationFrame(tick);var timer;function pause(){hold++;}function resume(){hold=Math.max(0,hold-1);}s.addEventListener('mouseenter',pause);s.addEventListener('mouseleave',resume);s.addEventListener('focusin',pause);s.addEventListener('focusout',resume);s.addEventListener('touchstart',function(){clearTimeout(timer);if(!s._t){s._t=1;pause();}},{passive:true});s.addEventListener('touchend',function(){clearTimeout(timer);timer=setTimeout(function(){if(s._t){s._t=0;resume();}},2500);},{passive:true});s.addEventListener('wheel',function(){clearTimeout(timer);if(!s._t){s._t=1;pause();}timer=setTimeout(function(){if(s._t){s._t=0;resume();}},2500);},{passive:true});})();</script>
 </body>
 </html>
