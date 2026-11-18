@@ -16,7 +16,7 @@
 <style>
 /* Layout follows the Wink blueprint. Palette, type and treatments come from the Casey Dudley design system (live caseydudley.com). */
 :root{
-  --bg:#1C1A16; --surface:#24221D;--olive:#7D7B45;--olive-bg:#33321F; --fg:#F8F6F1; --muted:#C9C3B6; --muted2:#B3AD9F; --line:#8F897C; --track:#2E2B25; --ink:#1C1A16; --grid:rgba(248,246,241,.045);
+  --bg:#1C1A16; --surface:#24221D;--olive:#7D7B45;--olive-bg:#33321F;--olive-hi:#BDB96C; --fg:#F8F6F1; --muted:#C9C3B6; --muted2:#B3AD9F; --line:#8F897C; --track:#2E2B25; --ink:#1C1A16; --grid:rgba(248,246,241,.045);
   --gold:#E8B43C; --hl:#F4DC9E;
   --draft:#E8875A; --draft-soft:#33251E; --slot:#7E786C;
   --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
@@ -172,6 +172,7 @@ header.top .btn.book{background:var(--gold);color:var(--ink);border-color:var(--
 @media (max-width:480px){header.top .ref{display:none}header.top .btn{flex:1}.pitem .pbtn .btn{flex:0 1 auto}}
 .pcards{display:grid;grid-template-columns:1fr;gap:16px;padding:36px 0 0;border-top:1px solid #4A463E}@media (min-width:720px){.pcards{grid-template-columns:repeat(2,1fr)}}.pcard{display:flex;flex-direction:column;gap:10px;padding:24px;background:var(--olive-bg);border:1px solid var(--olive);border-radius:12px}.pcard .ptitle{margin:0;font:800 20px/1.35 var(--mono);text-wrap:balance}.pcard p{margin:0;font-size:16px;line-height:1.7;color:var(--muted)}.pcard p b{color:var(--fg);font-weight:700}.pcard .pbtn{margin-top:auto;padding-top:8px}.pcard .pbtn .btn{flex:0 1 auto}
 .sechead{align-items:center;text-align:center}.sechead .gchip{align-self:center}.expect>h2{text-align:center}.expect>.label{align-self:center}.pstack{width:100%;margin-inline:auto}
+.acc{color:var(--olive-hi)}
 footer a{display:inline-flex;align-items:center;min-height:44px}
 </style>
 </head>
@@ -210,7 +211,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
     <blockquote class="pull"><span>“There are plenty of people who understand technology. Far fewer understand people, business, and technology equally well. Casey is one of them.”</span><cite>Chad Jacobson, COO, Manhattan, MT · <a href="https://g.page/r/CcnikXXMZAUhEBM" rel="noopener" target="_blank">Google review</a></cite></blockquote>
     <div class="sechead">
       <span class="label" id="s2">The journey</span>
-      <h2>From failed startups to building systems that learn</h2>
+      <h2>From failed startups to building <span class="acc">systems that learn</span></h2>
     </div>
     <div class="story-body">
       <p>In 2013 I closed my first service company. I’ve worked with startups and business owners ever since.</p>
@@ -222,7 +223,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
     </ol>
     <div class="expect">
       <span class="label" aria-hidden="true"></span>
-      <h2>7 hours in, get 10 back.</h2>
+      <h2>7 hours in, <span class="acc">get 10 back</span>.</h2>
       <div class="pstack">
         <div class="pitem"><span class="plbl">Investment</span><p class="pfig">$790 + 7 hours</p></div>
         <div class="pitem"><span class="plbl">Return</span><p class="pret">10 hours back in month 1, 10 more in month 2, then it stacks</p></div>
@@ -241,7 +242,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
 <section aria-labelledby="s4">
   <div class="wrap">
     <div class="sechead">
-      <h2 id="s4">What others are saying.</h2>
+      <h2 id="s4">What <span class="acc">others</span> are saying.</h2>
       <a class="gchip" aria-label="Google rating 5.0 out of 5, 1 review" href="https://g.page/r/CcnikXXMZAUhEBM" rel="noopener" target="_blank"><svg aria-hidden="true" height="22" style="display: inline-block; flex: none;" viewBox="0 0 48 48" width="22"><path d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#FBBC05"></path><path d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z" fill="#EA4335"></path><path d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" fill="#34A853"></path><path d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" fill="#4285F4"></path></svg><span>5.0</span><span class="stars">★★★★★</span><span class="cnt">Google Reviews (1)</span></a>
     </div>
     <div class="strip" tabindex="0" role="region" aria-label="Reviews">
