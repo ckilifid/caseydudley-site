@@ -249,6 +249,15 @@ header.top .wrap{padding-top:8px;padding-bottom:8px}
 .close .btns{align-items:flex-start;flex-wrap:wrap;gap:12px}.close .btn.out{min-height:60px;border:1px solid var(--line);color:var(--muted);font-weight:600}
 @media (max-width:719px){header.top .bnote{font-size:9px;letter-spacing:.06em;white-space:nowrap}header.top .bookcol{gap:3px}.close .btns{flex-direction:column;align-items:stretch}.bookcol{flex:1}header.top .wrap{padding-top:6px;padding-bottom:6px}}
 
+
+/* "No charge" line inside every Book the hour button */
+.btn.bk2{flex-direction:column;justify-content:center;gap:2px;line-height:1.1}
+.bk2 .bs{font:600 9px/1.1 var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.75;white-space:nowrap}
+.close .bk2 .bs,.pcta .bk2 .bs{font-size:11px}
+
+header.top .wrap{padding-top:0!important;padding-bottom:0!important}header.top .btn{min-height:48px}
+.pcta .bk2{min-height:54px;padding:0 24px}
+@media (max-width:400px){header.top .btn{font-size:12px;letter-spacing:.03em;padding:0 8px;white-space:nowrap}header.top .bk2 .bs{font-size:8px;letter-spacing:.04em}}
 footer a{display:inline-flex;align-items:center;min-height:44px}
 </style>
 </head>
@@ -258,7 +267,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
 <header class="top"><div class="wrap">
   <span class="ref">By referral</span>
   <a class="btn out" href="sms:+14066025383">Text a question</a>
-  <span class="bookcol"><a class="btn fill book" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener">Book the hour</a><span class="bnote">No charge · about 40 min</span></span>
+  <a class="btn fill book bk2" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener"><span class="bl">Book the hour</span><span class="bs">No charge · about 40 min</span></a>
 </div></header>
 
 <main id="top">
@@ -309,8 +318,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
         <div class="pcard"><span class="plbl">03 · Day 14</span><h3 class="ptitle">Feed what we learn back in.</h3><p><b>Result:</b> the tools get smarter with use, and the hours back keep growing.</p></div>
         <div class="pcard"><span class="plbl">04 · Day 30</span><h3 class="ptitle">Identify the next smart, small AI investment.</h3><p><b>Decision:</b> the tools now suggest the next step and what it returns. The owner runs with it, or I help.</p></div>
         </div>
-        <div class="btns pcta"><a class="btn fill" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener">Book the hour</a></div>
-        <p class="pnote">No charge · about 40 min</p>
+        <div class="btns pcta"><a class="btn fill bk2" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener"><span class="bl">Book the hour</span><span class="bs">No charge · about 40 min</span></a></div>
       </div>
     </div>
   </div>
@@ -341,7 +349,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
     <p class="lede" style="max-width:46ch;margin:0 auto 14px;text-align:center">AI can do a lot, but only a small part of it is worth a small business’s investment. Let’s figure that out before anything is spent.</p>
     <p class="lede" style="max-width:46ch;margin:0 auto 22px;text-align:center">Came by referral? Great. Let me know who to thank and when’s a good time to connect. Within 24 hours I’ll send a meeting request.</p>
     <div class="btns" style="justify-content:center">
-      <span class="bookcol"><a class="btn fill" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener">Book the hour</a><span class="bnote cnote">No charge · about 40 min</span></span>
+      <a class="btn fill bk2" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener"><span class="bl">Book the hour</span><span class="bs">No charge · about 40 min</span></a>
       <a class="btn out" href="sms:+14066025383">Text Casey</a>
       <a class="btn out" href="mailto:casey@caseydudley.com">Email Casey</a>
     </div>
