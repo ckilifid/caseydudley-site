@@ -16,7 +16,7 @@
 <style>
 /* Layout follows the Wink blueprint. Palette, type and treatments come from the Casey Dudley design system (live caseydudley.com). */
 :root{
-  --bg:#1C1A16; --surface:#24221D; --fg:#F8F6F1; --muted:#C9C3B6; --muted2:#B3AD9F; --line:#8F897C; --track:#2E2B25; --ink:#1C1A16; --grid:rgba(248,246,241,.045);
+  --bg:#1C1A16; --surface:#24221D;--olive:#7D7B45;--olive-bg:#33321F; --fg:#F8F6F1; --muted:#C9C3B6; --muted2:#B3AD9F; --line:#8F897C; --track:#2E2B25; --ink:#1C1A16; --grid:rgba(248,246,241,.045);
   --gold:#E8B43C; --hl:#F4DC9E;
   --draft:#E8875A; --draft-soft:#33251E; --slot:#7E786C;
   --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
@@ -123,7 +123,7 @@ section{padding:60px 0}
 .steps{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;align-items:stretch}
 @media (max-width:1023px){.steps{grid-template-columns:1fr}}
 /* reviews strip */
-.gchip{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:6px 14px;border:2px solid var(--line);background:var(--surface);text-decoration:none;font-weight:800;color:var(--fg)}
+.gchip{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:6px 14px;border:2px solid var(--olive);background:var(--olive-bg);text-decoration:none;font-weight:800;color:var(--fg)}
 .gchip .stars{color:var(--gold);letter-spacing:.1em}
 .card .stars,.card .kind{line-height:22px;min-height:22px}
 .card .kind{font:700 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
@@ -134,7 +134,7 @@ section{padding:60px 0}
 .strip{align-items:flex-start;padding-top:18px}
 @media (prefers-reduced-motion:reduce){.strip .card{transform:none}}
 .strip .card:last-child{flex-basis:min(520px,82vw)}
-.card{flex:0 0 min(360px,82vw);scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);padding:16px;display:flex;flex-direction:column;gap:12px}
+.card{flex:0 0 min(360px,82vw);scroll-snap-align:start;background:var(--olive-bg);border:1px solid var(--olive);padding:16px;display:flex;flex-direction:column;gap:12px}
 .card q{display:block;quotes:none;font-size:15px;line-height:1.6}
 .card .who{margin-top:2px;font:700 13px var(--mono)}
 .card .who span{display:block;font-weight:400;color:var(--muted)}
@@ -170,6 +170,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-bet
 header.top .btn.book{background:var(--gold);color:var(--ink);border-color:var(--gold);font-weight:800}
 .pitem .pbtn{margin-top:8px}
 @media (max-width:480px){header.top .ref{display:none}header.top .btn{flex:1}.pitem .pbtn .btn{flex:0 1 auto}}
+.pcards{display:grid;grid-template-columns:1fr;gap:16px;padding:36px 0 0;border-top:1px solid #4A463E}@media (min-width:720px){.pcards{grid-template-columns:repeat(2,1fr)}}.pcard{display:flex;flex-direction:column;gap:10px;padding:24px;background:var(--olive-bg);border:1px solid var(--olive)}.pcard .ptitle{margin:0;font:800 20px/1.35 var(--mono);text-wrap:balance}.pcard p{margin:0;font-size:16px;line-height:1.7;color:var(--muted)}.pcard p b{color:var(--fg);font-weight:700}.pcard .pbtn{margin-top:auto;padding-top:8px}.pcard .pbtn .btn{flex:0 1 auto}
 footer a{display:inline-flex;align-items:center;min-height:44px}
 </style>
 </head>
@@ -224,10 +225,12 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
       <div class="pstack">
         <div class="pitem"><span class="plbl">Investment</span><p class="pfig">$790 + 7 hours</p></div>
         <div class="pitem"><span class="plbl">Return</span><p class="pret">10 hours back in month 1, 10 more in month 2, then it stacks</p></div>
-        <div class="pitem"><span class="plbl">01 · No charge</span><h3 class="ptitle">Start with the business, not the technology.</h3><p><b>Deliverable:</b> the best opportunities to free up time, ranked by return.</p><div class="btns pbtn"><a class="btn fill" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener">Book the hour</a></div></div>
-        <div class="pitem"><span class="plbl">02 · $790</span><h3 class="ptitle">Plug custom tools into the systems already running.</h3></div>
-        <div class="pitem"><span class="plbl">03 · Day 14</span><h3 class="ptitle">Feed what we learn back in.</h3></div>
-        <div class="pitem"><span class="plbl">04 · Day 30</span><h3 class="ptitle">Identify the next smart, small AI investment.</h3><p><b>Decision:</b> the tools now suggest the next step and what it returns. The owner runs with it, or I help.</p></div>
+        <div class="pcards">
+        <div class="pcard"><span class="plbl">01 · No charge</span><h3 class="ptitle">Start with the business, not the technology.</h3><p><b>Deliverable:</b> the best opportunities to free up time, ranked by return.</p><div class="btns pbtn"><a class="btn fill" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener">Book the hour</a></div></div>
+        <div class="pcard"><span class="plbl">02 · $790</span><h3 class="ptitle">Plug custom tools into the systems already running.</h3></div>
+        <div class="pcard"><span class="plbl">03 · Day 14</span><h3 class="ptitle">Feed what we learn back in.</h3></div>
+        <div class="pcard"><span class="plbl">04 · Day 30</span><h3 class="ptitle">Identify the next smart, small AI investment.</h3><p><b>Decision:</b> the tools now suggest the next step and what it returns. The owner runs with it, or I help.</p></div>
+        </div>
       </div>
     </div>
   </div>
