@@ -241,6 +241,13 @@ footer{background:var(--olive-bg)}
 
 /* Lead lines pop like Wink: bright cream, examples stay soft */
 .obs li p:not(.ex){color:var(--fg)}
+
+/* Same "No charge" line under every Book the hour button; top-bar line hidden on phones */
+.bookcol{display:flex;flex-direction:column;align-items:stretch;gap:4px}
+.bnote{text-align:center;font:500 10px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+header.top .wrap{padding-top:8px;padding-bottom:8px}
+@media (max-width:719px){.bnote{display:none}.bookcol{flex:1}header.top .wrap{padding-top:0;padding-bottom:0}}
+
 footer a{display:inline-flex;align-items:center;min-height:44px}
 </style>
 </head>
@@ -250,7 +257,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
 <header class="top"><div class="wrap">
   <span class="ref">By referral</span>
   <a class="btn out" href="sms:+14066025383">Text a question</a>
-  <a class="btn fill book" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener">Book the hour</a>
+  <span class="bookcol"><a class="btn fill book" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener">Book the hour</a><span class="bnote">No charge · about 40 min</span></span>
 </div></header>
 
 <main id="top">
