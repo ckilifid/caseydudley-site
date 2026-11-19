@@ -355,16 +355,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
 </section>
 
 <!-- 4b · Before AI -->
-<section class="past" aria-labelledby="s4b">
-  <div class="wrap">
-    <div>
-      <span class="label">Before AI</span>
-      <h2 id="s4b">I got teams <span class="acc">moving together.</span></h2>
-      <p>Owners and their teams working toward the same objectives from a shared plan, in startups and growing companies.</p>
-    </div>
-    <a class="btn out" href="stories.html">See past clients</a>
-  </div>
-</section>
+
 <!-- 5 · Call to action -->
 <section aria-label="Contact" style="border-bottom:0">
   <div class="wrap close">
@@ -379,10 +370,16 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
 
 </main>
 
-<footer><div class="wrap">
-  <span>Casey Dudley LLC · Bozeman, MT</span>
-  <span><a href="sms:+14066025383">Text</a> · <a href="mailto:casey@caseydudley.com">Email</a></span>
-</div></footer>
+<section class="past" aria-labelledby="s4b">
+  <div class="wrap">
+    <div>
+      <span class="label">Before AI</span>
+      <h2 id="s4b">I got teams <span class="acc">moving together.</span></h2>
+      <p>Owners and their teams working toward the same objectives from a shared plan, in startups and growing companies.</p>
+    </div>
+    <a class="btn out" href="stories.html">See past clients</a>
+  </div>
+</section>
 
 <script>(function(){var s=document.querySelector('.strip');if(!s||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var cards=[].slice.call(s.querySelectorAll('.card'));if(!cards.length)return;function addSet(){cards.forEach(function(c){var k=c.cloneNode(true);k.setAttribute('aria-hidden','true');k.setAttribute('inert','');s.appendChild(k);});}addSet();var first=s.querySelectorAll('.card')[cards.length];function setW(){return first.offsetLeft-cards[0].offsetLeft;}var guard=0;while(guard++<6&&setW()>0&&s.scrollWidth<s.clientWidth+setW()*2)addSet();s.style.scrollSnapType='none';var pos=s.scrollLeft,paused=false,last=0,SPEED=128;function tick(t){var dt=last?Math.min(t-last,64)/1000:0;last=t;var w=setW();if(!paused&&!document.hidden){if(Math.abs(s.scrollLeft-pos)>2)pos=s.scrollLeft;pos+=SPEED*dt;if(w>0&&pos>=w)pos-=w;s.scrollLeft=pos;}else{pos=s.scrollLeft;if(w>0&&pos>=w){pos-=w;s.scrollLeft=pos;}}requestAnimationFrame(tick);}requestAnimationFrame(tick);function toggle(){paused=!paused;s.classList.toggle('paused',paused);s.setAttribute('aria-label',paused?'Reviews, paused. Click to play':'Reviews, moving. Click to pause');}s.setAttribute('aria-label','Reviews, moving. Click to pause');s.addEventListener('click',function(e){if(e.target.closest('a'))return;toggle();});s.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();toggle();}});})();</script>
 </body>
