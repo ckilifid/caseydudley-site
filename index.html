@@ -257,8 +257,17 @@ header.top .wrap{padding-top:0!important;padding-bottom:0!important}header.top .
 .pcta .bk2{min-height:54px;padding:0 24px}
 @media (max-width:400px){header.top .btn{font-size:12px;letter-spacing:.03em;padding:0 8px;white-space:nowrap}header.top .bk2 .bs{font-size:8px;letter-spacing:.04em}}
 .gread{margin-top:auto;font:500 12px/1.4 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--olive-hi);text-decoration:underline;text-underline-offset:3px}
-#past{scroll-margin-top:88px}
 .storylink{text-align:center;margin:28px 0 0;font:700 15px/1.5 var(--mono)}
+.close .btns{flex-direction:row!important;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px}
+.close .btn,.close .btn.fill,.close .btn.out{flex:0 0 auto;min-height:48px;padding:0 16px;font-size:16px}
+.close .btn.out{border:1px solid var(--line);color:var(--fg);font-weight:700}
+.close .bk2 .bs{font-size:9px}
+@media (max-width:480px){.close .btns{gap:6px;flex-wrap:nowrap}.close .btn,.close .btn.fill,.close .btn.out{padding:0 8px;font-size:12px;letter-spacing:.03em;white-space:nowrap}.close .bk2 .bs{font-size:8px;letter-spacing:.04em}}
+.closelink a.pwbtn{min-height:40px;padding:0 16px;font:700 13px var(--mono);letter-spacing:.06em;color:var(--fg);background:transparent;border:1px solid var(--line);text-decoration:none}
+.closelink a.pwbtn:hover,.closelink a.pwbtn:focus-visible{background:var(--hl);color:var(--ink);border-color:var(--hl)}
+.closelink{margin:32px auto 0;max-width:34em;font:400 13px/1.6 var(--mono)}
+.closelink a{color:var(--muted2);text-decoration:underline;text-decoration-thickness:1px;text-decoration-color:var(--line);text-underline-offset:3px}
+.closelink a:hover,.closelink a:focus-visible{color:var(--fg);text-decoration-color:var(--gold)}
 .strip{cursor:pointer}
 .tgrid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:8px}@media (min-width:720px){.tgrid{grid-template-columns:repeat(2,1fr)}}@media (min-width:1024px){.tgrid{grid-template-columns:repeat(3,1fr)}}
 .tcard{display:flex;flex-direction:column;gap:14px;padding:24px;background:var(--olive-bg);border:1px solid var(--olive);border-radius:12px}
@@ -304,12 +313,12 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
       <h2>From failed startups to <span class="acc">business systems that learn</span></h2>
     </div>
     <div class="story-body">
-      <p>In 2013 I closed my first service company. I’ve worked with business owners ever since. <a href="#past" style="color:inherit;text-decoration:underline;text-decoration-color:#E8B43C;text-underline-offset:3px">Here’s what they say about working with me.</a></p>
+      <p>In 2013 I closed my first service company. I’ve worked with business owners ever since. <a href="stories.html#clients" style="color:inherit;text-decoration:underline;text-decoration-color:#E8B43C;text-underline-offset:3px">Here’s what they say about working with me.</a></p>
       <p>Last year I spent 800 hours building and running an AI system. Two things stuck out:</p>
     </div>
     <ol class="obs">
       <li><span class="num" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#8F897C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></span><p>Most AI spend doesn't pay back for an everyday business.</p><p class="ex">Example: some builds overloaded my laptop. The $10K hardware fix won't pay off until revenue calls for it.</p></li>
-      <li><span class="num" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#8F897C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></span><p>Most AI saves a little time and stays the same.</p><p class="ex">Example: off-the-shelf AI can sort email on day one.</p></li>
+      <li><span class="num" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#8F897C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1 2V16h5.2v-.2c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z"/></svg></span><p>Most AI saves a little time and stops there.</p><p class="ex">Example: sorting email saves minutes. The bigger gain comes when what's in those emails tells the system where more revenue is.</p></li>
     </ol>
     <div class="expect">
       <span class="label" aria-hidden="true"></span>
@@ -323,7 +332,6 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
         <div class="pcard"><span class="plbl">03 · Day 14</span><h3 class="ptitle">Use what the first two weeks show to make the next one better.</h3><p><b>Result:</b> the tools get smarter with use.</p></div>
         <div class="pcard"><span class="plbl">04 · Day 30</span><h3 class="ptitle">Identify the next smart, small AI investment.</h3><p><b>Decision:</b> the tools now suggest the next step and what it returns. The owner runs with it, or I help.</p></div>
         </div>
-        <div class="btns pcta"><a class="btn fill bk2" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener"><span class="bl">Book the hour</span><span class="bs">No charge · about 40 min</span></a></div>
       </div>
     </div>
   </div>
@@ -340,29 +348,10 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
       <article class="card"><span class="stars" aria-label="5 stars">★★★★★</span><span class="src">Google review · Nov 11, 2026</span><q>Casey Dudley is one of those rare individuals who combines exceptional intelligence with genuine intuition and an ability to see the bigger picture. His understanding of AI and its practical applications is remarkable, but what really sets him apart is his judgment, curiosity, and ability to connect technology with meaningful business outcomes. I’ve often said Casey is exactly the kind of person I’d want as my personal chief of staff. Someone who can think strategically, challenge conventional thinking, anticipate needs, and turn complex ideas into actionable solutions. There are plenty of people who understand technology. Far fewer understand people, business, and technology equally well. Casey is one of them, and I couldn’t recommend him more highly.</q><p class="who">Chad Jacobson<span>COO, Manhattan, MT</span></p></article>
       <article class="card"><span class="stars" aria-label="5 stars">★★★★★</span><span class="src">Google review · Nov 19, 2026</span><q>AI did not work for me until a friend I have trusted for 20 years built it around my business. Before, every permit, invoice, inspection and client email lived in my head. Now one system plugs into the tools I already use. Payroll and invoicing used to take about 4 hours each. Now they take half the time. I was worried about losing control of it. Nope, I still send everything myself. If you have tried AI and felt the pain, Casey is your guy.</q><p class="who">Jonas Grenz<span>Owner, Global Gradient, Bozeman, MT</span></p><a class="gread" href="https://g.page/r/CcnikXXMZAUhEBM/review" target="_blank" rel="noopener">Read it on Google</a></article>
     </div>
-    <div class="btns pcta"><a class="btn fill bk2" href="https://calendly.com/caseykdudley/the-hour" target="_blank" rel="noopener"><span class="bl">Book the hour</span><span class="bs">No charge · about 40 min</span></a></div>
   </div>
 </section>
 
 <!-- 4b · Before AI -->
-<section aria-labelledby="s5" id="past">
-  <div class="wrap">
-    <div class="sechead">
-      <span class="label">Past clients</span>
-      <h2 id="s5">Different industries. Same thread: <span class="acc">growth, coordination, rallying people</span>.</h2>
-    </div>
-    <div class="tgrid">
-      <article class="tcard"><p class="twho">Josh Bowden<span>Owner</span></p><q>Casey has a unique skill set for fostering innovation while focusing on outcomes and results. I quickly recognized his value to my business and have worked with him ever since. Casey keeps our approaches lean and nimble, making it easier to tweak our propositions with changing client needs. I also feel Casey is great at engagement; his genuine interest and skilled inquiry transform conversations into mapped processes with clear action steps. I would take on any objective when Casey is on the team.</q></article>
-      <article class="tcard"><p class="twho">Stace McGee<span>Vice President</span></p><q>Casey’s creative way of thinking allowed us to explore challenges and opportunities from different perspectives and test our assumptions. His ability to toggle between exploring the boundaries of this issue, seeing the forest for the trees, and then focusing tactical boots on the ground was precisely what the scope required. The collection of intertwined issues and stakeholder sandboxes the business model addresses is enough to make anyone's head spin, which is why casey fits the bill. If you have a complex business and want someone to help you take it to the next level, I highly recommend Casey.</q></article>
-      <article class="tcard"><p class="twho">Anya Fiechtl<span>Architect</span></p><q>Casey is a skillful facilitator with contagious upbeat/ positive energy. He brings people together around common values, using creative problem solving to help teams focus their plans, gain consensus, and achieve their goals. Casey is a great listener and makes a genuine connection with everyone he meets. He is a joy to work with.</q></article>
-      <article class="tcard"><p class="twho">Madison Graff<span>Owner/Founder</span></p><q>Casey strategically designed the deliverance of our projects in a way that resulted in the client being engaged in the forefront of design and decision making. Threaded into his project deliverance, are feedback systems that measure success and provide opportunity to quickly respond to failures. On multiple occasions, Casey helped our team facilitate planning charrettes so that we could increase client engagement, shared leadership, and ownership of project objectives and key results. His professional manner that focuses “what matters” and teamwork extends well-beyond project deliverance, and contributes to an enriched organizational culture.</q></article>
-      <article class="tcard"><p class="twho">Sam Des Jardins<span>Senior Project &amp; Program Manager</span></p><q>Casey has been an integral part in the implementing a systems platform for use across my divisions and others here at the university. Creating feedback loops, helping to establish consistency, and exploring what matters were areas Casey excelled at in helping all of us through this implementation.</q></article>
-      <article class="tcard"><p class="twho">Chris Catlett<span>Former Director of Operations</span></p><q>Casey is a consummate professional who demonstrates a welcome air of positivity, a consistent “can do” attitude, and a desire to engage clients in a needs-based discussion with the hope of providing multiple options for continuous improvement. This interaction style lends itself to amazing relationship building and better outcomes, no matter the topic. I offer my strong endorsement on Casey’s behalf – he’s an excellent team member and leader.</q></article>
-    </div>
-    <p class="storylink"><a href="stories.html" style="color:inherit;text-decoration:underline;text-decoration-color:#E8B43C;text-underline-offset:3px">Stories from that work.</a></p>
-  </div>
-</section>
-
 <!-- 5 · Call to action -->
 <section aria-label="Contact" style="border-bottom:0">
   <div class="wrap close">
@@ -372,6 +361,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
       <a class="btn out" href="sms:+14066025383">Text Casey</a>
       <a class="btn out" href="mailto:casey@caseydudley.com">Email Casey</a>
     </div>
+    <p class="closelink"><a class="btn pwbtn" href="stories.html">Stories from past work</a></p>
   </div>
 </section>
 
